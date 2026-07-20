@@ -7,5 +7,10 @@
   },
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "dependencies": {
+    "animejs": "^4.5.0",
+    "googleapis": "^173.0.0",
+    "hono": "^4.12.31"
   }
 }
