@@ -96,3 +96,28 @@ body {
 }
 
 /*  */
+
+/* Form Styles */
+.form__group {
+	display: flex;
+	flex-direction: column;
+}
+
+.form__group input,
+.form__group button {
+	color: black;
+}
+
+.form__group button {
+	border: none;
+	text-align: center;
+}
+
+#youtube button {
+	background: #f0b100;
+}
+
+#youtube button:hover {
+	background: #ffdf20;
+}
+/*  */

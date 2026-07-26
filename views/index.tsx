@@ -10,7 +10,7 @@ export default () => (
 				</div>
 			</div>
 
-			<div className="section section--red section--padded">
+			<div className="section section--red section--padded" id="about">
 				<div className="section__title">About Project</div>
 				<div className="gap"></div>
 				<div className="section__description">
@@ -21,15 +21,32 @@ export default () => (
 				</div>
 			</div>
 
-			<div className="section section--yellow section--padded">
+			<div className="section section--yellow section--padded" id="youtube">
 				<div className="section__title">YouTube Settings</div>
 				<div className="gap"></div>
 				<div className="section__description">
-					Section Description
+					Here you will set the <b>YouTube Channel Username</b> and <b>Video ID</b> to get the live stream information.<br /><br />
+					Information will be shown <a href="/overlay">here.</a>
 				</div>
+				<div className="gap"></div>
+				<form action="/api/youtube" method="post">
+					<div className="form__group">
+						<label htmlFor="channelUsername">YouTube Channel Username</label>
+						<input type="text" id="channelUsername" name="channelUsername" placeholder="channelusername" required />
+					</div>
+					<div className="gap"></div>
+					<div className="form__group">
+						<label htmlFor="videoId">YouTube Video ID</label>
+						<input type="text" id="videoId" name="videoId" placeholder="Video ID" required />
+					</div>
+					<div className="gap"></div>
+					<div className="form__group">
+						<button type="submit">Save Settings</button>
+					</div>
+				</form>
 			</div>
 
-			<div className="section section--green section--padded">
+			<div className="section section--green section--padded" id="trakteer">
 				<div className="section__title">Trakteer Settings</div>
 				<div className="gap"></div>
 				<div className="section__description">
