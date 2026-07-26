@@ -1,5 +1,6 @@
 export default () => (
 	<>
+		<title>Project L.O.N.T.E. Rewrite Edition - Settings Menu</title>
 		<link rel="stylesheet" href="/css/index.css" />
 		<div id="container">
 			<div className="section">
