@@ -12,5 +12,10 @@
     "animejs": "^4.5.0",
     "googleapis": "^173.0.0",
     "hono": "^4.12.31"
+  },
+  "scripts": {
+    "dev": "bun run build && bun run start",
+    "build": "bun build views/js/* --outdir=dist/js --minify",
+    "start": "bun run index.ts"
   }
 }
