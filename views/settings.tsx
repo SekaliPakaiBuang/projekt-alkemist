@@ -6,7 +6,7 @@ type Data = {
 export default ({ channelUsername, videoId }: Data) => (
 	<>
 		<title>Project L.O.N.T.E. Rewrite Edition - Settings Menu</title>
-		<link rel="stylesheet" href="/css/index.css" />
+		<link rel="stylesheet" href="/css/settings.css" />
 		<div id="container">
 			<div className="section">
 				<div id="title">PROJECT L.O.N.T.E.</div>

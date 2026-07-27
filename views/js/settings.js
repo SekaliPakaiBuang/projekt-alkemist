@@ -3,6 +3,7 @@ const submitButton = form.querySelector('button[type="submit"]');
 
 form.addEventListener('submit', async (e) => {
 	submitButton.disabled = true;
+	submitButton.textContent = 'Now Saving';
 
 	// Submission
 	e.preventDefault();
@@ -27,5 +28,6 @@ form.addEventListener('submit', async (e) => {
 	}
 	finally {
 		submitButton.disabled = false;
+		submitButton.textContent = 'Save Settings';
 	}
 });
