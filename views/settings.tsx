@@ -1,4 +1,9 @@
-export default () => (
+type Data = {
+	channelUsername: string;
+	videoId: string;
+};
+
+export default ({ channelUsername, videoId }: Data) => (
 	<>
 		<title>Project L.O.N.T.E. Rewrite Edition - Settings Menu</title>
 		<link rel="stylesheet" href="/css/index.css" />
@@ -26,7 +31,7 @@ export default () => (
 					that has a <b>browser source</b> feature.
 					<br />
 					<i>This project is a rewrite of my older web app with the same name,
-					mainly as an exercise for better programming skills.</i>
+						mainly as an exercise for better programming skills.</i>
 				</div>
 			</div>
 
@@ -40,7 +45,7 @@ export default () => (
 					Information will be shown <a href="/overlay">here.</a>
 				</div>
 				<div className="gap"></div>
-				<form action="/api/youtube" method="post">
+				<form>
 					<div className="form__group">
 						<label htmlFor="channelUsername">YouTube Channel Username</label>
 						<input
@@ -48,6 +53,7 @@ export default () => (
 							id="channelUsername"
 							name="channelUsername"
 							placeholder="channelusername"
+							value={channelUsername}
 							required
 						/>
 					</div>
@@ -59,6 +65,7 @@ export default () => (
 							id="videoId"
 							name="videoId"
 							placeholder="Video ID"
+							value={videoId}
 							required
 						/>
 					</div>
@@ -81,5 +88,6 @@ export default () => (
 				All rights reserved.
 			</div>
 		</div>
+		<script src="/js/settings.js"></script>
 	</>
 );

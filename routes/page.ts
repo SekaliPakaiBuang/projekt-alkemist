@@ -1,6 +1,6 @@
 // Imports
-import { Hono } from "hono";
-import * as pageController from "../controllers/page.ts";
+import { Hono } from 'hono';
+import * as pageController from '../controllers/page.ts';
 
 // Router
 const app = new Hono();
