@@ -20,7 +20,7 @@ export default ({ channelUsername, videoId }: Data) => (
 			<div className="section section--red section--padded" id="about">
 				<div className="section__title">About Project</div>
 				<div className="gap"></div>
-				<div className="section__description">
+				<p className="section__description">
 					<b>Project L.O.N.T.E. (Live Online Notes for Tally and Events)</b> is
 					an app that shows the live stream information such as
 					<b> subscriber count, view count, etc. </b>This also shows donation
@@ -32,20 +32,20 @@ export default ({ channelUsername, videoId }: Data) => (
 					<br />
 					<i>This project is a rewrite of my older web app with the same name,
 						mainly as an exercise for better programming skills.</i>
-				</div>
+				</p>
 			</div>
 
 			<div className="section section--yellow section--padded" id="youtube">
 				<div className="section__title">YouTube Settings</div>
 				<div className="gap"></div>
-				<div className="section__description">
+				<p className="section__description">
 					Here you will set the <b>YouTube Channel Username</b> and
 					<b> Video ID</b> to get the live stream information.
 					<br />
 					Information will be shown <a href="/overlay">here.</a>
-				</div>
+				</p>
 				<div className="gap"></div>
-				<form>
+				<form method="post">
 					<div className="form__group">
 						<label htmlFor="channelUsername">YouTube Channel Username</label>
 						<input
@@ -79,7 +79,7 @@ export default ({ channelUsername, videoId }: Data) => (
 			<div className="section section--green section--padded" id="trakteer">
 				<div className="section__title">Trakteer Settings</div>
 				<div className="gap"></div>
-				<div className="section__description">Section Description</div>
+				<p className="section__description">Section Description</p>
 			</div>
 
 			<div id="footer">
@@ -87,6 +87,12 @@ export default ({ channelUsername, videoId }: Data) => (
 				<br />
 				All rights reserved.
 			</div>
+
+			<dialog className="dialog">
+				<p className="dialog__message" id="dialog__message"></p>
+				<div className="gap"></div>
+				<button>OK</button>
+			</dialog>
 		</div>
 		<script src="/js/settings.js"></script>
 	</>

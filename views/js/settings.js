@@ -1,6 +1,14 @@
 const form = document.querySelector('#youtube form');
 const submitButton = form.querySelector('button[type="submit"]');
 
+const dialog = document.querySelector('dialog');
+const dialogMessage = dialog.querySelector('p');
+const dialogButton = dialog.querySelector('button');
+
+dialogButton.addEventListener('click', () => {
+	dialog.close();
+});
+
 form.addEventListener('submit', async (e) => {
 	submitButton.disabled = true;
 	submitButton.textContent = 'Now Saving';
@@ -10,7 +18,7 @@ form.addEventListener('submit', async (e) => {
 	const channelUsername = form.querySelector('input[name="channelUsername"]').value.trim();
 	const videoId = form.querySelector('input[name="videoId"]').value.trim();
 
-	const request = fetch('/api/youtube', {
+	const request = await fetch('/api/youtube', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json'
@@ -18,16 +26,16 @@ form.addEventListener('submit', async (e) => {
 		body: JSON.stringify({ channelUsername, videoId })
 	});
 
-	try {
-		const response = await request;
-		const result = await response.json();
-		console.log(result);
+	if (request.ok) {
+		dialogMessage.textContent = 'Settings saved successfully!';
 	}
-	catch (error) {
-		console.error('Error:', error);
+	else {
+		let { errors } = await request.json();
+		dialogMessage.innerHTML = `<b>Failed to save settings!</b><br>${errors.join('<br>')}`;
 	}
-	finally {
-		submitButton.disabled = false;
-		submitButton.textContent = 'Save Settings';
-	}
+
+	submitButton.disabled = false;
+	submitButton.textContent = 'Save Settings';
+	dialog.showModal();
 });
+
