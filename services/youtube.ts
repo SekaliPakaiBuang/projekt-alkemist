@@ -19,7 +19,7 @@ class YouTubeService {
 	pollSchedule: ReturnType<typeof setInterval> | null = null;
 
 	start(): void {
-		console.info("Now starting YouTube Service");
+		console.info("Mulai mendapatkan data YouTube");
 		this.pollSchedule = setInterval(() => {
 			void this.#poll();
 		}, 20000);
