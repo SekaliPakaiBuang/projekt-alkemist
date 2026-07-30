@@ -30,7 +30,7 @@ export default ({ channelUsername, videoId }: Data) => (
 				<div className="gap"></div>
 				<p className="section__description">
 					Di sini anda akan menetapkan <b>YouTube Channel Username</b> dan <b>Video ID</b> untuk mendapatkan informasi siaran langsung.
-					<br />
+					<br /><br />
 					Informasi akan ditampilkan <a href="/overlay">di sini.</a>
 				</p>
 				<div className="gap"></div>
