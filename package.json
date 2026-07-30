@@ -1,5 +1,5 @@
 {
-  "name": "/project-lonte-rewrite",
+  "name": "projekt-alkemist",
   "module": "index.ts",
   "type": "module",
   "devDependencies": {

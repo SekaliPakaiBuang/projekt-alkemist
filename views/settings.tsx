@@ -5,42 +5,34 @@ type Data = {
 
 export default ({ channelUsername, videoId }: Data) => (
 	<>
-		<title>Project L.O.N.T.E. Rewrite Edition - Settings Menu</title>
+		<title>Projekt Alkemist - Pengaturan</title>
 		<link rel="stylesheet" href="/css/settings.css" />
 		<div id="container">
 			<div className="section">
-				<div id="title">PROJECT L.O.N.T.E.</div>
+				<div id="title">PROJEKT ALKEMIST</div>
 				<div id="subtitle">
-					Live Online Notes for Tally and Events
-					<br />
-					<b>Rewrite Edition</b>
+					Alat Kendali & Manajemen Informasi Streaming
 				</div>
 			</div>
 
 			<div className="section section--red section--padded" id="about">
-				<div className="section__title">About Project</div>
+				<div className="section__title">Tentang Projekt</div>
 				<div className="gap"></div>
 				<p className="section__description">
-					<b>Project L.O.N.T.E. (Live Online Notes for Tally and Events)</b> is
-					an app that shows the live stream information such as
-					<b> subscriber count, view count, etc. </b>This also shows donation
-					information from <b>Trakteer</b> following the upcoming
-					<b> Stream Overlay 2.0</b>.
+					<b>Projekt Alkemist</b> adalah sebuah aplikasi yang menampilkan informasi siaran langsung seperti <b>jumlah subscriber, jumlah penonton, dan lain-lain.</b>
+					Aplikasi ini juga menampilkan informasi donasi dari <b>Trakteer</b> sehubungan dengan peluncuran <b>Stream Overlay 2.0</b>.
 					<br />
-					Designed for use in <b>OBS Studio</b> or similar broadcasting software
-					that has a <b>browser source</b> feature.
+					Dirancang untuk digunakan di <b>OBS Studio</b> atau software serupa yang memiliki fitur <b>browser source</b>.
 					<br />
-					<i>This project is a rewrite of my older web app with the same name,
-						mainly as an exercise for better programming skills.</i>
+					<i>Proyek ini merupakan <i>remake</i> dari aplikasi web lama saya, terutama sebagai latihan untuk meningkatkan keterampilan pemrograman.</i>
 				</p>
 			</div>
 
 			<div className="section section--yellow section--padded" id="youtube">
-				<div className="section__title">YouTube Settings</div>
+				<div className="section__title">Pengaturan YouTube</div>
 				<div className="gap"></div>
 				<p className="section__description">
-					Here you will set the <b>YouTube Channel Username</b> and
-					<b> Video ID</b> to get the live stream information.
+					Here you will set the <b>YouTube Channel Username</b> and <b>Video ID</b> to get the live stream information.
 					<br />
 					Information will be shown <a href="/overlay">here.</a>
 				</p>
@@ -77,7 +69,7 @@ export default ({ channelUsername, videoId }: Data) => (
 			</div>
 
 			<div className="section section--green section--padded" id="trakteer">
-				<div className="section__title">Trakteer Settings</div>
+				<div className="section__title">Pengaturan Trakteer</div>
 				<div className="gap"></div>
 				<p className="section__description">Section Description</p>
 			</div>

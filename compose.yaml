@@ -1,10 +1,10 @@
-name: project-lonte-rewrite
+name: projekt-alkemist
 services:
   app:
     image: oven/bun:latest
-    working_dir: /project-lonte-rewrite
+    working_dir: /projekt-alkemist
     volumes:
-      - .:/project-lonte-rewrite
+      - .:/projekt-alkemist
     ports:
       - ${PORT}:${PORT}
     tty: true
