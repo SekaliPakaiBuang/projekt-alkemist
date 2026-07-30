@@ -20,4 +20,9 @@ import apiRouter from './routes/api';
 app.route('/', pageRouter);
 app.route('/api', apiRouter);
 
+// Services
+import youtubeService from './services/youtube';
+
+youtubeService.start();
+
 export default app;
