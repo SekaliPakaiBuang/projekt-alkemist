@@ -33,6 +33,16 @@ body {
 
 }
 
+button {
+	border: none;
+	cursor: pointer;
+}
+
+button:disabled {
+	cursor: not-allowed;
+}
+
+/* Container Styles */
 #container {
 	width: 75%;
 
@@ -43,11 +53,12 @@ body {
 
 }
 
+/*  */
 
 /* Title Styles */
 #title {
 	font-size: 3.75rem;
-	font-weight: bolder;
+	font-weight: 1000;
 
 	text-align: center;
 }
@@ -75,7 +86,7 @@ body {
 
 .section__title {
 	font-size: 2.5rem;
-	font-weight: bolder;
+	font-weight: 1000;
 }
 
 .section__description {
@@ -110,11 +121,9 @@ body {
 .form__group input,
 .form__group button {
 	color: black;
-	font-weight: bolder;
 }
 
 .form__group button {
-	border: none;
 	text-align: center;
 }
 
@@ -145,7 +154,6 @@ dialog {
 dialog button {
 	width: 100%;
 	font-size: 2rem;
-	font-weight: bolder;
 
 	color: black;
 	background: #cad5e2;

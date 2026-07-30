@@ -9,9 +9,15 @@ dialogButton.addEventListener('click', () => {
 	dialog.close();
 });
 
+dialog.addEventListener('click', (event) => {
+	if (event.target === dialog) {
+		dialog.close();
+	}
+});
+
 form.addEventListener('submit', async (e) => {
 	submitButton.disabled = true;
-	submitButton.textContent = 'Now Saving';
+	submitButton.textContent = 'Sedang Menyimpan...';
 
 	// Submission
 	e.preventDefault();
@@ -27,15 +33,15 @@ form.addEventListener('submit', async (e) => {
 	});
 
 	if (request.ok) {
-		dialogMessage.textContent = 'Settings saved successfully!';
+		dialogMessage.textContent = 'Pengaturan berhasil disimpan!';
 	}
 	else {
 		let { errors } = await request.json();
-		dialogMessage.innerHTML = `<b>Failed to save settings!</b><br>${errors.join('<br>')}`;
+		dialogMessage.innerHTML = `<b>Gagal menyimpan pengaturan!</b><br>${errors.join('<br>')}`;
 	}
 
 	submitButton.disabled = false;
-	submitButton.textContent = 'Save Settings';
+	submitButton.textContent = 'Simpan';
 	dialog.showModal();
 });
 

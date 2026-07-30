@@ -4,7 +4,7 @@ import { Context } from 'hono';
 
 // Controller
 export async function youtubeGet(c: Context) {
-	return c.json({ message: 'YouTube settings received successfully.' });
+	return c.json({ message: 'Pengaturan YouTube diterima dengan sukses.' });
 }
 
 export async function youtubePost(c: Context) {
@@ -14,16 +14,16 @@ export async function youtubePost(c: Context) {
 
 		// Null check
 		if (typeof data !== 'object' || data === null) {
-			return c.json({ error: 'Invalid JSON format.' }, 400);
+			return c.json({ error: 'Jenis data tidak valid.' }, 400);
 		}
 
 		const { channelUsername, videoId } = data as Record<string, unknown>;
 
 		// Validate channelUsername and videoId
 		if (typeof channelUsername !== 'string' || channelUsername.trim() === '')
-			errors.push('channelUsername is required and must be a non-empty string.');
+			errors.push('Channel Username tidak boleh kosong.');
 		if (typeof videoId !== 'string' || videoId.trim() === '')
-			errors.push('videoId is required and must be a non-empty string.');
+			errors.push('Video ID tidak boleh kosong.');
 
 		// Returns
 		if (errors.length > 0)
@@ -33,9 +33,9 @@ export async function youtubePost(c: Context) {
 		await redis.hset('youtube', 'channelUsername', channelUsername as string);
 		await redis.hset('youtube', 'videoId', videoId as string);
 
-		return c.json({ message: 'YouTube settings updated successfully.' }, 200);
+		return c.json({ message: 'Pengaturan YouTube berhasil disimpan.' }, 200);
 	}
 	catch (error) {
-		return c.json({ error: 'Failed to update YouTube settings.' }, 500);
+		return c.json({ error: 'Gagal menyimpan pengaturan YouTube.' }, 500);
 	}
 }

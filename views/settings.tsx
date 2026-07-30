@@ -19,12 +19,9 @@ export default ({ channelUsername, videoId }: Data) => (
 				<div className="section__title">Tentang Projekt</div>
 				<div className="gap"></div>
 				<p className="section__description">
-					<b>Projekt Alkemist</b> adalah sebuah aplikasi yang menampilkan informasi siaran langsung seperti <b>jumlah subscriber, jumlah penonton, dan lain-lain.</b>
-					Aplikasi ini juga menampilkan informasi donasi dari <b>Trakteer</b> sehubungan dengan peluncuran <b>Stream Overlay 2.0</b>.
-					<br />
+					<b>Projekt Alkemist</b> adalah sebuah aplikasi yang menampilkan informasi siaran langsung seperti <b>jumlah subscriber, jumlah penonton, dan lain-lain.</b> Aplikasi ini juga menampilkan informasi donasi dari <b>Trakteer</b> sehubungan dengan peluncuran <b>Stream Overlay 2.0</b>.
+					<br /><br />
 					Dirancang untuk digunakan di <b>OBS Studio</b> atau software serupa yang memiliki fitur <b>browser source</b>.
-					<br />
-					<i>Proyek ini merupakan <i>remake</i> dari aplikasi web lama saya, terutama sebagai latihan untuk meningkatkan keterampilan pemrograman.</i>
 				</p>
 			</div>
 
@@ -32,9 +29,9 @@ export default ({ channelUsername, videoId }: Data) => (
 				<div className="section__title">Pengaturan YouTube</div>
 				<div className="gap"></div>
 				<p className="section__description">
-					Here you will set the <b>YouTube Channel Username</b> and <b>Video ID</b> to get the live stream information.
+					Di sini anda akan menetapkan <b>YouTube Channel Username</b> dan <b>Video ID</b> untuk mendapatkan informasi siaran langsung.
 					<br />
-					Information will be shown <a href="/overlay">here.</a>
+					Informasi akan ditampilkan <a href="/overlay">di sini.</a>
 				</p>
 				<div className="gap"></div>
 				<form method="post">
@@ -63,7 +60,7 @@ export default ({ channelUsername, videoId }: Data) => (
 					</div>
 					<div className="gap"></div>
 					<div className="form__group">
-						<button type="submit">Save Settings</button>
+						<button type="submit">Simpan</button>
 					</div>
 				</form>
 			</div>
