@@ -1,4 +1,4 @@
-import { redis } from "bun";
+import { redis } from 'bun';
 
 interface SupportItem {
 	supporter_name: string;
@@ -10,7 +10,7 @@ interface SupportItem {
 const apiKey = process.env.TR_API_KEY;
 
 if (!process.env.TR_API_KEY) {
-	throw new Error("Missing TR_API_KEY environment variable");
+	throw new Error('TR_API_KEY tidak ada di environment variable.');
 }
 
 class TrakteerService {
@@ -21,7 +21,7 @@ class TrakteerService {
 	}
 
 	start(): void {
-		console.info("Mulai mendapatkan data Trakteer");
+		console.info('Mulai mendapatkan data Trakteer');
 		this.pollSchedule = setInterval(() => void this.poll(), 20000);
 		void this.poll();
 	}
@@ -31,17 +31,17 @@ class TrakteerService {
 			const response = await fetch(
 				`https://api.trakteer.id/v1/public/supports?limit=10&page=1`,
 				{
-					method: "GET",
+					method: 'GET',
 					headers: {
-						Accept: "application/json",
-						"X-Requested-With": "XMLHttpRequest",
-						key: apiKey ?? ""
+						Accept: 'application/json',
+						'X-Requested-With': 'XMLHttpRequest',
+						key: apiKey ?? ''
 					}
 				}
 			);
 
 			if (!response.ok) {
-				console.error("Trakteer API error:", response.status);
+				console.error('Trakteer API error:', response.status);
 				return;
 			}
 
@@ -55,9 +55,9 @@ class TrakteerService {
 				updated_at: String(item.updated_at)
 			}));
 
-			await redis.set("trakteer", JSON.stringify(data));
+			await redis.set('trakteer', JSON.stringify(data));
 		} catch (err) {
-			console.error("Error polling Trakteer:", err);
+			console.error('Error polling Trakteer:', err);
 		}
 	}
 

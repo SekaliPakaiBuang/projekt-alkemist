@@ -1,5 +1,5 @@
-import { google } from "googleapis";
-import { redis } from "bun";
+import { google } from 'googleapis';
+import { redis } from 'bun';
 
 type RedisValue = string | null;
 
@@ -7,11 +7,11 @@ type RedisValue = string | null;
 const apiKey = process.env.YT_API_KEY;
 
 if (!apiKey) {
-	throw new Error("Missing YT_API_KEY environment variable");
+	throw new Error('YT_API_KEY tidak ada di environment variable');
 }
 
 const youtube = google.youtube({
-	version: "v3",
+	version: 'v3',
 	auth: process.env.YT_API_KEY,
 });
 
@@ -19,7 +19,7 @@ class YouTubeService {
 	pollSchedule: ReturnType<typeof setInterval> | null = null;
 
 	start(): void {
-		console.info("Mulai mendapatkan data YouTube");
+		console.info('Mulai mendapatkan data YouTube');
 		this.pollSchedule = setInterval(() => {
 			void this.#poll();
 		}, 20000);
@@ -29,8 +29,8 @@ class YouTubeService {
 	async #poll(): Promise<void> {
 		try {
 			// Get config from Redis
-			const channel = await redis.hget("youtube", "channel") as RedisValue;
-			const video = await redis.hget("youtube", "video") as RedisValue;
+			const channel = await redis.hget('youtube', 'channel') as RedisValue;
+			const video = await redis.hget('youtube', 'video') as RedisValue;
 
 			if (!channel || !video) {
 				return;
@@ -42,11 +42,11 @@ class YouTubeService {
 			// Get data
 			const [channelQuery, videoQuery] = await Promise.all([
 				youtube.channels.list({
-					part: ["statistics"],
+					part: ['statistics'],
 					forHandle: channelUsername,
 				}),
 				youtube.videos.list({
-					part: ["liveStreamingDetails", "statistics"],
+					part: ['liveStreamingDetails', 'statistics'],
 					id: [videoId],
 				}),
 			]);
@@ -59,7 +59,7 @@ class YouTubeService {
 			} = videoQuery.data.items?.[0] ?? {};
 
 			// Update Redis
-			await redis.hset("youtube", {
+			await redis.hset('youtube', {
 				subscribers: Number(subscribers),
 				likes: Number(likes),
 				views: Number(views),
