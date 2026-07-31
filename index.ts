@@ -22,7 +22,9 @@ app.route('/api', apiRouter);
 
 // Services
 import youtubeService from './services/youtube';
+import trakteerService from './services/trakteer';
 
 youtubeService.start();
+trakteerService.start();
 
 export default app;

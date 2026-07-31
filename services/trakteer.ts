@@ -7,6 +7,12 @@ interface SupportItem {
 	updated_at: string;
 }
 
+const apiKey = process.env.TR_API_KEY;
+
+if (!process.env.TR_API_KEY) {
+	throw new Error("Missing TR_API_KEY environment variable");
+}
+
 class TrakteerService {
 	private pollSchedule: ReturnType<typeof setInterval> | null;
 
@@ -29,7 +35,7 @@ class TrakteerService {
 					headers: {
 						Accept: "application/json",
 						"X-Requested-With": "XMLHttpRequest",
-						key: process.env.TR_API_KEY ?? ""
+						key: apiKey ?? ""
 					}
 				}
 			);
