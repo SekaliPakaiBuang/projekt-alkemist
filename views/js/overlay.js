@@ -18,14 +18,11 @@ function flip() {
 	});
 
 	tl.add(body, {
-		scale: [1, 0.75],
+		scale: [1, 0.75, 1],
 
-		duration: 0.5,
+		duration: 1,
 
-		playbackEase: easings.eases.out(2),
-
-		alternate: true,
-		loop: 1
+		playbackEase: easings.eases.outIn(2),
 	}, '<<');
 }
 
