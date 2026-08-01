@@ -26,4 +26,4 @@ function flip() {
 	}, '<<');
 }
 
-setInterval(flip, 1500);
+setInterval(flip, 10000);
