@@ -4,7 +4,18 @@ import { Context } from 'hono';
 
 // Controller
 export async function youtubeGet(c: Context) {
-	return c.json({ message: 'Pengaturan YouTube diterima dengan sukses.' });
+	try {
+		const data = await redis.hmget('youtube', ['subscribers', 'likes', 'views']);
+
+		return c.json({
+			subscribers: Number(data[0] ?? 0),
+			likes: Number(data[1] ?? 0),
+			views: Number(data[2] ?? 0),
+		});
+	}
+	catch (error) {
+		return c.json({ error: 'Gagal mengambil pengaturan YouTube.' }, 500);
+	}
 }
 
 export async function youtubePost(c: Context) {
@@ -30,8 +41,10 @@ export async function youtubePost(c: Context) {
 			return c.json({ errors }, 400);
 
 		// Store in Redis
-		await redis.hset('youtube', 'channelUsername', channelUsername as string);
-		await redis.hset('youtube', 'videoId', videoId as string);
+		await redis.hset('youtube', {
+			channelUsername: channelUsername as string,
+			videoId: videoId as string
+		});
 
 		return c.json({ message: 'Pengaturan YouTube berhasil disimpan.' }, 200);
 	}

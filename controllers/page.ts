@@ -20,10 +20,26 @@ export async function settingsPage(c: Context) {
 		);
 	}
 	catch (error) {
-		return c.json({ error: 'Failed to load the page.' }, 500);
+		return c.json({ error: 'Gagal memuat halaman.' }, 500);
 	}
 }
 
 export async function overlayPage(c: Context) {
 	return c.html(OverlayPage());
+}
+
+export async function livechatPage(c: Context) {
+	try {
+		// Fetch YouTube video ID from Redis
+		const videoId = await redis.hget('youtube', 'videoId');
+
+		if (!videoId) {
+			return c.json({ error: 'YouTube video ID not found.' }, 404);
+		}
+
+		return c.redirect(`https://www.youtube.com/live_chat?v=${videoId}`);
+	}
+	catch (error) {
+		return c.json({ error: 'Gagal memuat halaman.' }, 500);
+	}
 }

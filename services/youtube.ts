@@ -29,11 +29,11 @@ class YouTubeService {
 	async #poll(): Promise<void> {
 		try {
 			// Get config from Redis
-			const channel = await redis.hget('youtube', 'channel') as RedisValue;
-			const video = await redis.hget('youtube', 'video') as RedisValue;
+			const channel = await redis.hget('youtube', 'channelUsername') as RedisValue;
+			const video = await redis.hget('youtube', 'videoId') as RedisValue;
 
 			if (!channel || !video) {
-				return;
+				throw new Error('Channel atau Video ID tidak ada');
 			}
 
 			const channelUsername = String(channel);
