@@ -8,5 +8,6 @@ const app = new Hono();
 // Routes
 app.post('/youtube', apiController.youtubePost);
 app.get('/youtube', apiController.youtubeGet);
+app.get('/trakteer', apiController.trakteerGet);
 
 export default app;

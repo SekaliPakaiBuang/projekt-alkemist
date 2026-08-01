@@ -3,7 +3,7 @@ export default () => (
 		<title>Projekt Alkemist - Overlay</title>
 		<link rel="stylesheet" href="/css/overlay.css" />
 		<div id="container">
-			<div className="card card--front">
+			<div className="card card--front full-width full-height">
 				<div className="flex flex--row">
 					<div id="clock--time" className="card__element--big">00:00:00</div>
 					<div id="clock--tz" className="card__element--small">UTC+7</div>
@@ -13,8 +13,8 @@ export default () => (
 					<div id="calendar--day" className="card__element--small">Monday</div>
 				</div>
 			</div>
-			<div className="card card--back">
-				<div className="flex flex--row flex--evenly flex--full-width">
+			<div className="card card--back full-width full-height">
+				<div className="flex flex--row flex--space full-width">
 					<div className="flex flex--row">
 						<img src="/svg/person.svg" alt="Subscribers" width="20" height="20" />
 						<div id="counter--subscribers" className="card__element--big">0</div>
@@ -26,6 +26,51 @@ export default () => (
 					<div className="flex flex--row">
 						<img src="/svg/heart.svg" alt="Likes" width="20" height="20" />
 						<div id="counter--likes" className="card__element--big">0</div>
+					</div>
+				</div>
+				<div id="trakteer" className="flex flex--column flex--center full-width full-height">
+					<div className="card__element--big">Trakteerderboard</div>
+					<div className="trakteer__list full-width">
+						<div className="trakteer__container flex flex--row flex--space full-width">
+							<div className="trakteer__name">Entry</div>
+							<div className="trakteer__value">0</div>
+						</div>
+						<div className="trakteer__container flex flex--row flex--space full-width">
+							<div className="trakteer__name">Entry</div>
+							<div className="trakteer__value">0</div>
+						</div>
+						<div className="trakteer__container flex flex--row flex--space full-width">
+							<div className="trakteer__name">Entry</div>
+							<div className="trakteer__value">0</div>
+						</div>
+						<div className="trakteer__container flex flex--row flex--space full-width">
+							<div className="trakteer__name">Entry</div>
+							<div className="trakteer__value">0</div>
+						</div>
+						<div className="trakteer__container flex flex--row flex--space full-width">
+							<div className="trakteer__name">Entry</div>
+							<div className="trakteer__value">0</div>
+						</div>
+						<div className="trakteer__container flex flex--row flex--space full-width">
+							<div className="trakteer__name">Entry</div>
+							<div className="trakteer__value">0</div>
+						</div>
+						<div className="trakteer__container flex flex--row flex--space full-width">
+							<div className="trakteer__name">Entry</div>
+							<div className="trakteer__value">0</div>
+						</div>
+						<div className="trakteer__container flex flex--row flex--space full-width">
+							<div className="trakteer__name">Entry</div>
+							<div className="trakteer__value">0</div>
+						</div>
+						<div className="trakteer__container flex flex--row flex--space full-width">
+							<div className="trakteer__name">Entry</div>
+							<div className="trakteer__value">0</div>
+						</div>
+						<div className="trakteer__container flex flex--row flex--space full-width">
+							<div className="trakteer__name">Entry</div>
+							<div className="trakteer__value">0</div>
+						</div>
 					</div>
 				</div>
 			</div>

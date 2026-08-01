@@ -15,6 +15,9 @@ const subscriberCount = document.querySelector('#counter--subscribers');
 const viewCount = document.querySelector('#counter--views');
 const likeCount = document.querySelector('#counter--likes');
 
+const trakteerNames = document.querySelectorAll('#trakteer .trakteer__name');
+const trakteerValues = document.querySelectorAll('#trakteer .trakteer__value');
+
 let isFlipped = false;
 
 function flip() {
@@ -40,6 +43,7 @@ function flip() {
 		isFlipped = !isFlipped;
 		if (!isFlipped) {
 			youtubeData();
+			trakteerData();
 		}
 	}, '<');
 }
@@ -51,7 +55,7 @@ function clock() {
 	clockTz.textContent = `UTC${now.getTimezoneOffset() > 0 ? '-' : '+'}${Math.abs(now.getTimezoneOffset() / 60)}`;
 
 	calendarDate.textContent = now.toLocaleDateString('en-CA');
-	calendarDay.textContent = now.toLocaleDateString('en-GB', { weekday: 'long' }).toUpperCase();
+	calendarDay.textContent = now.toLocaleDateString('en-GB', { weekday: 'long' });
 }
 
 async function youtubeData() {
@@ -59,8 +63,8 @@ async function youtubeData() {
 		const request = await fetch('/api/youtube');
 		const data = await request.json();
 
-		if (data.error) {
-			throw new Error(data.error);
+		if (!request.ok) {
+			throw new Error(request.statusText);
 		}
 
 		const { subscribers, views, likes } = data;
@@ -83,8 +87,34 @@ async function youtubeData() {
 	}
 }
 
+async function trakteerData() {
+	try {
+		const request = await fetch('/api/trakteer');
+		let data = JSON.parse(await request.json());
+
+		if (!request.ok) {
+			throw new Error(request.statusText);
+		}
+
+		for (let i = 0; i < trakteerNames.length; i++) {
+			const name = data[i]?.supporter_name || 'N/A';
+			const value = data[i]?.amount || 0;
+
+			trakteerNames[i].textContent = name;
+			trakteerValues[i].textContent = new Intl.NumberFormat('en', {
+				notation: 'compact',
+				maximumSignificantDigits: 3
+			}).format(value);
+		}
+	}
+	catch (error) {
+		console.error(error);
+	}
+}
+
 clock();
 youtubeData();
+trakteerData();
 
 setInterval(clock, 1000);
 setInterval(flip, 10000);
