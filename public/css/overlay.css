@@ -7,6 +7,9 @@
 	font-kerning: none;
 	font-size: 1.25rem;
 
+	font-stretch: condensed;
+	font-width: condensed;
+
 	line-height: 1;
 	letter-spacing: 0;
 
@@ -70,4 +73,34 @@ body {
 	transform: rotateY(180deg);
 }
 
-/*  */
+/* Card Elements */
+.flex {
+	display: flex;
+	align-items: baseline;
+}
+
+.flex--row {
+	flex-direction: row;
+}
+
+.flex--column {
+	flex-direction: column;
+}
+
+.flex--evenly {
+	justify-content: space-evenly;
+}
+
+.flex--full-width {
+	width: 100%;
+}
+
+.card__element--big {
+	font-size: 40px;
+	font-weight: bolder;
+}
+
+.card__element--small {
+	font-size: 20px;
+	font-weight: normal;
+}
