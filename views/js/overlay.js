@@ -51,7 +51,7 @@ function clock() {
 	clockTz.textContent = `UTC${now.getTimezoneOffset() > 0 ? '-' : '+'}${Math.abs(now.getTimezoneOffset() / 60)}`;
 
 	calendarDate.textContent = now.toLocaleDateString('en-CA');
-	calendarDay.textContent = now.toLocaleDateString('en-GB', { weekday: 'long' });
+	calendarDay.textContent = now.toLocaleDateString('en-GB', { weekday: 'long' }).toUpperCase();
 }
 
 async function youtubeData() {
