@@ -10,8 +10,11 @@ const app = new Hono();
 // Middleware
 app.use(logger());
 app.use(prettyJSON({ force: true }));
+
 app.use('/css/*', serveStatic({ root: './public' }));
+app.use('/svg/*', serveStatic({ root: './public' }));
 app.use('/js/*', serveStatic({ root: './dist' }));
+
 app.use(timeout(10000));
 
 // Routes

@@ -17,12 +17,15 @@ export default () => (
 				<div className="flex flex--row flex--evenly flex--full-width">
 					<div className="flex flex--row">
 						<div id="counter--subscribers" className="card__element--big">0</div>
+						<img src="/svg/person.svg" alt="Subscribers" width="20" height="20" />
 					</div>
 					<div className="flex flex--row">
 						<div id="counter--views" className="card__element--big">0</div>
+						<img src="/svg/play.svg" alt="Views" width="20" height="20" />
 					</div>
 					<div className="flex flex--row">
 						<div id="counter--likes" className="card__element--big">0</div>
+						<img src="/svg/heart.svg" alt="Likes" width="20" height="20" />
 					</div>
 				</div>
 			</div>

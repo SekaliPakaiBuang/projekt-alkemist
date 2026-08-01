@@ -21,6 +21,12 @@
 
 	margin: 0;
 	padding: 0;
+
+	text-shadow: 2px 2px 2px black;
+}
+
+img {
+	filter: drop-shadow(2px 2px 2px black);
 }
 
 body {

@@ -52,8 +52,6 @@ function clock() {
 
 	calendarDate.textContent = now.toLocaleDateString('en-CA');
 	calendarDay.textContent = now.toLocaleDateString('en-GB', { weekday: 'long' });
-
-	requestAnimationFrame(clock);
 }
 
 async function youtubeData() {
@@ -88,4 +86,5 @@ async function youtubeData() {
 clock();
 youtubeData();
 
+setInterval(clock, 1000);
 setInterval(flip, 10000);
