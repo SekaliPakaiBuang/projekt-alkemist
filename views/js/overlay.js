@@ -31,7 +31,7 @@ function flip() {
 	});
 
 	tl.add(body, {
-		scale: [1, 0.875, 1],
+		scale: [1, 0.75, 1],
 
 		duration: 1,
 
