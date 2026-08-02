@@ -15,35 +15,33 @@ const subscriberCount = document.querySelector('#counter--subscribers');
 const viewCount = document.querySelector('#counter--views');
 const likeCount = document.querySelector('#counter--likes');
 
-const trakteerNames = document.querySelectorAll('#trakteer .trakteer__name');
-const trakteerValues = document.querySelectorAll('#trakteer .trakteer__value');
-
 let isFlipped = false;
 
 function flip() {
-	let tl = createTimeline();
+	let tl = createTimeline({
+		playbackEase: easings.eases.inOutCirc,
+	});
 
 	tl.add(container, {
-		rotateY: '-=180deg',
+		rotateX: '-=180deg',
 
 		duration: 1,
 
-		easings: easings.eases.inOut(2),
+		ease: easings.eases.linear,
 	});
 
 	tl.add(body, {
-		scale: [1, 0.75, 1],
+		scale: [1, 0.875, 1],
 
 		duration: 1,
 
-		playbackEase: easings.eases.outIn(2),
+		playbackEase: easings.eases.inOutCirc,
 	}, '<<');
 
 	tl.call(() => {
 		isFlipped = !isFlipped;
 		if (!isFlipped) {
 			youtubeData();
-			trakteerData();
 		}
 	}, '<');
 }
@@ -87,34 +85,8 @@ async function youtubeData() {
 	}
 }
 
-async function trakteerData() {
-	try {
-		const request = await fetch('/api/trakteer');
-		let data = JSON.parse(await request.json());
-
-		if (!request.ok) {
-			throw new Error(request.statusText);
-		}
-
-		for (let i = 0; i < trakteerNames.length; i++) {
-			const name = data[i]?.supporter_name || 'N/A';
-			const value = data[i]?.amount || 0;
-
-			trakteerNames[i].textContent = name;
-			trakteerValues[i].textContent = new Intl.NumberFormat('en', {
-				notation: 'compact',
-				maximumSignificantDigits: 3
-			}).format(value);
-		}
-	}
-	catch (error) {
-		console.error(error);
-	}
-}
-
 clock();
 youtubeData();
-trakteerData();
 
 setInterval(clock, 1000);
 setInterval(flip, 10000);

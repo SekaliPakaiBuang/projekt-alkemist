@@ -28,51 +28,6 @@ export default () => (
 						<div id="counter--likes" className="card__element--big">0</div>
 					</div>
 				</div>
-				<div id="trakteer" className="flex flex--column flex--center full-width full-height">
-					<div className="card__element--big">Trakteerderboard</div>
-					<div className="trakteer__list full-width">
-						<div className="trakteer__container flex flex--row flex--space full-width">
-							<div className="trakteer__name">Entry</div>
-							<div className="trakteer__value">0</div>
-						</div>
-						<div className="trakteer__container flex flex--row flex--space full-width">
-							<div className="trakteer__name">Entry</div>
-							<div className="trakteer__value">0</div>
-						</div>
-						<div className="trakteer__container flex flex--row flex--space full-width">
-							<div className="trakteer__name">Entry</div>
-							<div className="trakteer__value">0</div>
-						</div>
-						<div className="trakteer__container flex flex--row flex--space full-width">
-							<div className="trakteer__name">Entry</div>
-							<div className="trakteer__value">0</div>
-						</div>
-						<div className="trakteer__container flex flex--row flex--space full-width">
-							<div className="trakteer__name">Entry</div>
-							<div className="trakteer__value">0</div>
-						</div>
-						<div className="trakteer__container flex flex--row flex--space full-width">
-							<div className="trakteer__name">Entry</div>
-							<div className="trakteer__value">0</div>
-						</div>
-						<div className="trakteer__container flex flex--row flex--space full-width">
-							<div className="trakteer__name">Entry</div>
-							<div className="trakteer__value">0</div>
-						</div>
-						<div className="trakteer__container flex flex--row flex--space full-width">
-							<div className="trakteer__name">Entry</div>
-							<div className="trakteer__value">0</div>
-						</div>
-						<div className="trakteer__container flex flex--row flex--space full-width">
-							<div className="trakteer__name">Entry</div>
-							<div className="trakteer__value">0</div>
-						</div>
-						<div className="trakteer__container flex flex--row flex--space full-width">
-							<div className="trakteer__name">Entry</div>
-							<div className="trakteer__value">0</div>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 		<script src="/js/overlay.js"></script>

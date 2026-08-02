@@ -56,7 +56,7 @@ button:disabled {
 
 }
 
-/*  */
+/* ----- */
 
 /* Title Styles */
 #title {
@@ -75,7 +75,7 @@ button:disabled {
 	font-size: 1rem;
 }
 
-/*  */
+/* ----- */
 
 /* Section Styles */
 .section {
@@ -113,7 +113,7 @@ button:disabled {
 	height: 20px;
 }
 
-/*  */
+/* ----- */
 
 /* Form Styles */
 .form__group {
@@ -138,7 +138,7 @@ button:disabled {
 	background: #ffdf20;
 }
 
-/*  */
+/* ----- */
 
 /* Dialog Styles */
 dialog {
@@ -181,4 +181,4 @@ dialog p {
 	margin: 0;
 }
 
-/*  */
+/* ----- */

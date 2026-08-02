@@ -52,13 +52,3 @@ export async function youtubePost(c: Context) {
 		return c.json({ error: 'Gagal menyimpan pengaturan YouTube.' }, 500);
 	}
 }
-
-export async function trakteerGet(c: Context) {
-	try {
-		const data = await redis.get('trakteer');
-		return c.json(data);
-	}
-	catch (error) {
-		return c.json({ error: 'Gagal mengambil data Trakteer.' }, 500);
-	}
-}

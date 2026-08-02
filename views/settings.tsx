@@ -19,9 +19,7 @@ export default ({ channelUsername, videoId }: Data) => (
 				<div className="section__title">Tentang Projekt</div>
 				<div className="gap"></div>
 				<p className="section__description">
-					<b>Projekt Alkemist</b> adalah sebuah aplikasi yang menampilkan informasi siaran langsung seperti <b>jumlah subscriber, jumlah penonton, dan lain-lain.</b> Aplikasi ini juga menampilkan informasi donasi dari <b>Trakteer</b> sehubungan dengan peluncuran <b>Stream Overlay 2.0</b>.
-					<br /><br />
-					Dirancang untuk digunakan di <b>OBS Studio</b> atau software serupa yang memiliki fitur <b>browser source</b>.
+					<b>Projekt Alkemist</b> adalah sebuah aplikasi yang menampilkan informasi siaran langsung seperti <b>jumlah subscriber, jumlah penonton, dan lain-lain.</b> Dirancang untuk digunakan di <b>OBS Studio</b> atau software serupa yang memiliki fitur <b>browser source</b>.
 				</p>
 			</div>
 
@@ -63,12 +61,6 @@ export default ({ channelUsername, videoId }: Data) => (
 						<button type="submit">Simpan</button>
 					</div>
 				</form>
-			</div>
-
-			<div className="section section--green section--padded" id="trakteer">
-				<div className="section__title">Pengaturan Trakteer</div>
-				<div className="gap"></div>
-				<p className="section__description">Section Description</p>
 			</div>
 
 			<div id="footer">

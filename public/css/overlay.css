@@ -25,7 +25,7 @@
 
 body {
 	width: 360px;
-	height: 360px;
+	height: 120px;
 
 	perspective: 1000px;
 	transform-style: preserve-3d;
@@ -73,11 +73,11 @@ body {
 }
 
 .card--front {
-	transform: rotateY(0deg);
+	transform: rotateX(0deg);
 }
 
 .card--back {
-	transform: rotateY(180deg);
+	transform: rotateX(180deg);
 }
 
 .card__element--big {
@@ -107,7 +107,7 @@ body {
 }
 
 .flex--space {
-	justify-content: space-between;
+	justify-content: space-evenly;
 }
 
 .flex--center {
@@ -118,10 +118,6 @@ body {
 /* ----- */
 
 /* Unique Elements */
-.trakteer__value {
-	font-weight: bolder;
-}
-
 #calendar--day {
 	text-transform: uppercase;
 }
