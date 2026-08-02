@@ -1,14 +1,14 @@
 # Projekt Alkemist
 
-Repositori ini dibuat untuk publikasi, siapa tahu kan ada yang penasaran gimana caranya SPB bikin overlay.
-Jika kalian mau membuat projek serupa dengan memakai ini sebagai starting point, monggo.
+Repositori ini dibuat untuk transparansi proses. Diperbolehkan untuk menggunakan projek ini sebagai starting point/inspirasi jika ingin membuat projek serupa.
 
 ## Tentang Projekt Alkemist
 **Projekt Alkemist (Alat Kendali dan Manajemen Informasi Streaming)** adalah sebuah aplikasi yang menampilkan informasi siaran langsung seperti **jumlah subscriber, jumlah penonton, dan lain-lain.** Dirancang untuk digunakan di **OBS Studio** atau software serupa yang memiliki fitur **browser source.**
 
 ## Tech Stack
-Alat yang digunakan dalam projek ini di antaranya:
-1. Bun dan TypeScript
-2. Hono
-3. Anime.js
-4. YouTube Data API
+Alat bantu yang digunakan dalam projek ini di antaranya:
+1. Podman/Docker
+2. Bun dan TypeScript
+3. Hono
+4. Anime.js
+5. YouTube Data API
