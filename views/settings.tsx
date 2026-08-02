@@ -64,9 +64,7 @@ export default ({ channelUsername, videoId }: Data) => (
 			</div>
 
 			<div id="footer">
-				©2026 SekaliPakaiBuang.
-				<br />
-				All rights reserved.
+				©2026 SekaliPakaiBuang
 			</div>
 
 			<dialog className="dialog">
