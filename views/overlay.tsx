@@ -1,7 +1,9 @@
 export default () => (
 	<>
 		<title>Projekt Alkemist - Overlay</title>
+		<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
 		<link rel="stylesheet" href="/css/overlay.css" />
+
 		<div id="container">
 			<div className="card card--front full-width full-height">
 				<div className="flex flex--row">

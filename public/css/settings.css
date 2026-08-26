@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,slnt,wdth,wght,GRAD,ROND@6..144,-10..0,25..151,1..1000,0..100,0..100&display=swap');
-
 * {
-	font-family: 'Google Sans Flex', sans-serif;
+	font-family: 'Inter var', sans-serif;
+	font-feature-settings: "case", "tnum", "ss04", "cv02", "cv03", "cv04", "cv06", "cv11";
 	font-optical-sizing: none;
-	font-feature-settings: "ss01", "tnum", "zero";
 	font-kerning: none;
 	font-size: 1.25rem;
 

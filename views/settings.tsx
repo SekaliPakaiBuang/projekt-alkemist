@@ -6,7 +6,9 @@ type Data = {
 export default ({ channelUsername, videoId }: Data) => (
 	<>
 		<title>Projekt Alkemist - Pengaturan</title>
+		<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
 		<link rel="stylesheet" href="/css/settings.css" />
+
 		<div id="container">
 			<div className="section">
 				<div id="title">PROJEKT ALKEMIST</div>
