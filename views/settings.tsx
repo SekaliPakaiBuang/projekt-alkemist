@@ -11,14 +11,14 @@ export default ({ channelUsername, videoId }: Data) => (
 
 		<div id="container">
 			<div className="section">
-				<div id="title">PROJEKT ALKEMIST</div>
-				<div id="subtitle">
+				<p id="title">PROJEKT ALKEMIST</p>
+				<p id="subtitle">
 					Alat Kendali & Manajemen Informasi Streaming
-				</div>
+				</p>
 			</div>
 
 			<div className="section section--red section--padded" id="about">
-				<div className="section__title">Tentang Projekt</div>
+				<p className="section__title">Tentang Projekt</p>
 				<div className="gap"></div>
 				<p className="section__description">
 					<b>Projekt Alkemist</b> adalah sebuah aplikasi yang menampilkan informasi siaran langsung seperti <b>jumlah subscriber, jumlah penonton, dan lain-lain.</b> Dirancang untuk digunakan di <b>OBS Studio</b> atau software serupa yang memiliki fitur <b>browser source</b>.
@@ -26,7 +26,7 @@ export default ({ channelUsername, videoId }: Data) => (
 			</div>
 
 			<div className="section section--yellow section--padded" id="youtube">
-				<div className="section__title">Pengaturan YouTube</div>
+				<p className="section__title">Pengaturan YouTube</p>
 				<div className="gap"></div>
 				<p className="section__description">
 					Di sini anda akan menetapkan <b>YouTube Channel Username</b> dan <b>Video ID</b> untuk mendapatkan informasi siaran langsung.
@@ -65,9 +65,9 @@ export default ({ channelUsername, videoId }: Data) => (
 				</form>
 			</div>
 
-			<div id="footer">
+			<p id="footer">
 				©2026 SekaliPakaiBuang
-			</div>
+			</p>
 
 			<dialog className="dialog">
 				<p className="dialog__message" id="dialog__message"></p>
