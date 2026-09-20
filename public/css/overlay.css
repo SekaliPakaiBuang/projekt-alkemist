@@ -1,12 +1,9 @@
 * {
-	font-family: 'Google Sans Flex', sans-serif;
-	font-feature-settings: "ss01", "tnum", "zero";
+	font-family: 'Inter var', sans-serif;
+	font-feature-settings: "case", "tnum", "cv01", "cv02", "cv03", "cv04", "cv05", "cv06", "cv08", "cv11", "calt";
 	font-optical-sizing: none;
 	font-kerning: none;
 	font-size: 1.25rem;
-
-	font-stretch: condensed;
-	font-width: condensed;
 
 	line-height: 1;
 	letter-spacing: 0;
@@ -19,7 +16,6 @@
 
 	margin: 0;
 	padding: 0;
-
 }
 
 body {

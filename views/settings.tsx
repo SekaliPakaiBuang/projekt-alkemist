@@ -6,9 +6,7 @@ type Data = {
 export default ({ channelUsername, videoId }: Data) => (
 	<>
 		<title>Projekt Alkemist - Pengaturan</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-		<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
 		<link rel="stylesheet" href="/css/settings.css" />
 
 		<div id="container">
