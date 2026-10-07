@@ -4,6 +4,7 @@ import { logger } from 'hono/logger';
 import { prettyJSON } from 'hono/pretty-json';
 import { serveStatic } from 'hono/bun';
 import { timeout } from 'hono/timeout';
+
 // App
 const app = new Hono();
 
