@@ -92,15 +92,15 @@ button:disabled {
 }
 
 .section--red {
-	background: radial-gradient(circle at center, #fb2c36aa, #82181aaa);
+	background: #fb2c3655;
 }
 
 .section--yellow {
-	background: radial-gradient(circle at center, #f0b100aa, #733e0aaa);
+	background: #f0b10055;
 }
 
 .section--green {
-	background: radial-gradient(circle at center, #00c950aa, #0d542baa);
+	background: #00c95055;
 }
 
 .gap {
@@ -140,7 +140,7 @@ dialog {
 	border: none;
 	padding: 20px;
 
-	background: radial-gradient(circle at center, #314158, #0f172b);
+	background: #314158;
 	text-align: center;
 
 	position: absolute;
