@@ -55,7 +55,7 @@ body {
 .card {
 	position: absolute;
 
-	background: radial-gradient(circle at center, #314158, #0f172b);
+	background: #0f172b;
 
 	display: flex;
 	flex-direction: column;
