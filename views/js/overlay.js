@@ -1,9 +1,7 @@
 import { engine, easings, createTimeline } from 'animejs';
 
 engine.pauseOnDocumentHidden = false;
-engine.timeUnit = 's';
 
-const body = document.querySelector('body');
 const container = document.querySelector('#container');
 
 const clockTime = document.querySelector('#clock--time');
@@ -25,17 +23,15 @@ function flip() {
 	tl.add(container, {
 		rotateX: '-=180deg',
 
-		duration: 1,
-
+		duration: 1000,
 		ease: easings.eases.linear,
 	});
 
-	tl.add(body, {
-		scale: [1, 0.75, 1],
+	tl.add(container, {
+		translateZ: [0, -60, 0],
 
-		duration: 1,
-
-		playbackEase: easings.eases.inOutCirc,
+		duration: 1000,
+		ease: easings.eases.linear,
 	}, '<<');
 
 	tl.call(() => {
