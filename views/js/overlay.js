@@ -64,8 +64,8 @@ async function youtubeData() {
 		const { subscribers, views, likes } = data;
 
 		subscriberCount.textContent = formatNumber(subscribers);
-		viewCount.textContent = formatNumber(views);
-		likeCount.textContent = formatNumber(likes);
+		viewCount.textContent = views;
+		likeCount.textContent = likes;
 	}
 	catch (error) {
 		console.error(error);
