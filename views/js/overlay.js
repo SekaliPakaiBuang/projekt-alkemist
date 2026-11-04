@@ -67,22 +67,20 @@ async function youtubeData() {
 
 		const { subscribers, views, likes } = data;
 
-		subscriberCount.textContent = new Intl.NumberFormat('en', {
-			notation: 'compact',
-			maximumSignificantDigits: 3
-		}).format(subscribers);
-		viewCount.textContent = new Intl.NumberFormat('en', {
-			notation: 'compact',
-			maximumSignificantDigits: 3
-		}).format(views);
-		likeCount.textContent = new Intl.NumberFormat('en', {
-			notation: 'compact',
-			maximumSignificantDigits: 3
-		}).format(likes);
+		subscriberCount.textContent = formatNumber(subscribers);
+		viewCount.textContent = formatNumber(views);
+		likeCount.textContent = formatNumber(likes);
 	}
 	catch (error) {
 		console.error(error);
 	}
+}
+
+function formatNumber(number) {
+	return new Intl.NumberFormat('en', {
+		notation: 'compact',
+		maximumSignificantDigits: 3
+	}).format(number);
 }
 
 clock();
