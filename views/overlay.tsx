@@ -28,7 +28,7 @@ export default () => (
           </div>
         </div>
         <div className="card card--back full-width full-height">
-          <div className="flex flex--row flex--space full-width">
+          <div className="flex flex--column flex--center full-width">
             <div className="flex flex--row">
               <img
                 src="/svg/person.svg"
